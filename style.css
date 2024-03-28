@@ -22,7 +22,7 @@ html {
 
 body {
     background-color: var(--light-pink);
-    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-image: url(background-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     place-content: center;
@@ -109,7 +109,7 @@ button:hover {
 
 @media screen and (min-width: 1200px) {
     body {
-        background-image: url(assets/images/background-pattern-desktop.svg);
+        background-image: url(background-pattern-desktop.svg);
         font-size: 1.5rem;
         margin: 5% 0 0 0;
         
