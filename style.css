@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Work Sans';
+}
+  
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --graish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+  }
+
+
+body {
+    background-color: var(--light-pink);
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    place-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    max-height: 100%;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    color: var(--dark-purple);
+    font-weight: 600;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*pushing the first item to the start and the last item to the end of the container*/
+    gap: 1rem; /*gap between the child elements*/
+}
+
+button:hover {
+    color: var(--graish-purple);
+}
+
+.FAQ {
+    background-color: var(--white);
+    border:none;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 6rem 3rem;
+    max-width: 100%;
+}
+
+.heading {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.questionSection .question:not(:last-child) {
+    border-bottom: var(--light-pink) 2px solid;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.questionSection .icon {
+    min-width: 10%;
+}
+
+.questionSection .question h4 { 
+    width: 80%;    
+}
+
+.question .icon .minus {
+    display: none;
+}
+
+.question p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease; 
+    /*animate the change in max-height when expanding or collapsing 
+    the FAQ answer over a duration of 200 milliseconds with an ease timing function*/
+    color: var(--graish-purple);
+    padding-right: 15%;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+        font-size: 1.5rem;
+        margin: 5% 0 0 0;
+        
+    }
+
+    .FAQ {
+        width:70%;
+        padding: 3%;
+    }
+
+}
+
+
